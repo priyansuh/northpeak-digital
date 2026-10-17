@@ -15,7 +15,7 @@ head,body{
     --secondary-text-color:#a16207;
     --card-color:#fff0bf;
     --border-color:#f0d99a;
-    --highlight-color:#d99a24;
+    --highlight-color:#e4a0229c;
 }
 
 html{
@@ -253,7 +253,7 @@ visual-card p{
         row-gap:0;
         padding:60px 24px;
     }
-    .hero-content,.hero-container>p,hero-action,.hero-visual{
+    .hero-content,.hero-container>p,.hero-action,.hero-visual{
         grid-column:1;
         grid-row:auto;
     }
@@ -266,7 +266,7 @@ visual-card p{
     }
 }
 
-@media(max-height:480px){
+@media(max-width:480px){
     .container{
         padding:18px 16px;
     }
@@ -640,5 +640,47 @@ visual-card p{
     }
     .contatc-content>p:nth-of-type(2){
         font-size:15px;
+    }
+}
+
+.menu-toggle{
+    display:none;
+    background:transparent;
+    border:1px solid var(--border-color);
+    color:var(--primary-text-color);
+    font-size:22px;
+    padding:8px 12px;
+    border-radius: 8px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .container{
+        position:relative;
+    }
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
+    .go {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        width: 100%;
+        padding: 20px 0;
+        order:3;
+    }
+
+    .go.is-open{
+        display:flex;
+    }
+
+    .container .cta{
+        order:2;
+    }
+
+    .go li{
+        width:100%;
     }
 }
